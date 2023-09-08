@@ -38,6 +38,9 @@
         <button onclick="tambah()">
             Penambahan
         </button>
+        <button onclick="Kurang()">
+            Pengurangan
+        </button>
         </div>
 
         <div>
@@ -86,6 +89,11 @@
             let a=document.getElementById('bil1').value;
             let b=document.getElementById('bil2').value;
             let Hasil=parseInt(a)+parseInt(b);
+            document.getElementById('hasil').innerHTML=Hasil;
+        } function Kurang(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let Hasil=a-b;
             document.getElementById('hasil').innerHTML=Hasil;
         }
         function nama(){
