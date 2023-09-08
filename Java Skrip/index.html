@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajarjavascript</title>
+</head>
+<body>
+    <div>
+        <h1 id="Waktu">Waktu</h1>
+        <button onclick="Halo()">
+        Klik
+        </button>
+        <button onclick="Waktu()">
+            waktu
+        </button>
+        </div >
+
+        <div>
+        <input type="number" id="Bulan" placeholder="bulan".>
+        <input type="number" id="tanggal" placeholder="Tanggal".>
+        <h1 id="zodiak">Zodiak</h1>
+        <button onclick="Zodiak()">
+            Zodiak
+        </button
+        </div>
+
+        <div>
+        <h1 id="hasil">g</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2">
+        <button onclick="kali()">
+            Perkalian
+        </button>
+        <button onclick="bagi()"> 
+            Pembagian
+        </button>
+        <button onclick="tambah()">
+            Penambahan
+        </button>
+        </div>
+
+        <div>
+            <h1 id="saya">Namaku</h1>
+            <input type="text" name="" id="Nama">
+            <button onclick="Namasaya()">Nama Me</button>
+        </div>
+    
+    <script>
+        function Halo(){
+            alert("Halo Java Script");
+        }
+        function Waktu(){
+            document.getElementById('Waktu').innerHTML=Date();
+        }
+        function Zodiak (){
+            let Tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('Bulan').value;
+            let Zodiak="Tidak Tahu"
+            if(bulan==1){
+                if(Tanggal>0 && Tanggal<21){
+                Zodiak="Aries";
+            }
+                if(Tanggal>21 && Tanggal<30){
+                    Zodiak="Leo";
+                }
+            }
+            if(bulan==2){
+                if(Tanggal>0 && Tanggal<20){
+                    Zodiak="Kakap";
+                }
+            }
+        document.getElementById('zodiak').innerHTML=Zodiak;
+        }
+        function kali(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;       
+            let Hasil = a*b;
+            document.getElementById('hasil').innerHTML=Hasil;
+        } function bagi(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let Hasil =a/b;
+            document.getElementById('hasil').innerHTML=Hasil;
+        } function tambah(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let Hasil=parseInt(a)+parseInt(b);
+            document.getElementById('hasil').innerHTML=Hasil;
+        }
+        function nama(){
+            document.getElementById('saya').innerHTML="dani Tzy Alok Geming";
+        }
+        function Namasaya(){
+            document.getElementById('saya').innerHTML=document.getElementById('Nama').value;
+        }
+
+    </script>
+</body>
+</html>
